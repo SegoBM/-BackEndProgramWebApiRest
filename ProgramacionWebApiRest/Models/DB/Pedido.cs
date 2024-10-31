@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace ProgramacionWebApiRest.Models.DB;
-
-public partial class Pedido
+namespace ProgramacionWebApiRest.Models
 {
-    public Guid PedidoId { get; set; }
-
-    public Guid? ClienteId { get; set; }
-
-    public DateTime Fecha { get; set; }
-
-    public decimal Total { get; set; }
-
-    public virtual Cliente? Cliente { get; set; }
-
-    public virtual ICollection<DetallesPedido> DetallesPedidos { get; set; } = new List<DetallesPedido>();
+    public class Pedido
+    {
+        public Guid PedidoId { get; set; }  // uniqueidentifier
+        public Guid ClienteId { get; set; }  // foreign key to Cliente
+        public DateTime Fecha { get; set; }  // datetime
+        public Guid ProductoId { get; set; }  // uniqueidentifier
+        public int Cantidad { get; set; }  // int
+        public decimal Precio { get; set; }  // decimal(18, 2)
+    }
 }

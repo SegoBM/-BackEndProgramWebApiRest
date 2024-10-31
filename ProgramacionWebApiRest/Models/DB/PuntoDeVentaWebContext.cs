@@ -17,7 +17,6 @@ public partial class PuntoDeVentaWebContext : DbContext
 
     public virtual DbSet<Cliente> Clientes { get; set; }
 
-    public virtual DbSet<DetallesPedido> DetallesPedidos { get; set; }
 
     public virtual DbSet<Pedido> Pedidos { get; set; }
 
@@ -46,23 +45,7 @@ public partial class PuntoDeVentaWebContext : DbContext
             entity.Property(e => e.Telefono).HasMaxLength(20);
         });
 
-        modelBuilder.Entity<DetallesPedido>(entity =>
-        {
-            entity.HasKey(e => e.DetalleId).HasName("PK__Detalles__6E19D6FA5FFC7E25");
 
-            entity.Property(e => e.DetalleId)
-                .HasDefaultValueSql("(newid())")
-                .HasColumnName("DetalleID");
-            entity.Property(e => e.PedidoId).HasColumnName("PedidoID");
-            entity.Property(e => e.Precio).HasColumnType("decimal(10, 2)");
-            entity.Property(e => e.ProductoId).HasColumnName("ProductoID");
-
-            entity.HasOne(d => d.Pedido).WithMany(p => p.DetallesPedidos)
-                .HasForeignKey(d => d.PedidoId)
-                .HasConstraintName("FK__DetallesP__Pedid__49C3F6B7");
-
-           
-        });
 
         modelBuilder.Entity<Pedido>(entity =>
         {
@@ -72,14 +55,10 @@ public partial class PuntoDeVentaWebContext : DbContext
                 .HasDefaultValueSql("(newid())")
                 .HasColumnName("PedidoID");
             entity.Property(e => e.ClienteId).HasColumnName("ClienteID");
+            entity.Property(e => e.ProductoId).HasColumnName("ProductoID"); // Asegúrate de que esta línea esté presente
             entity.Property(e => e.Fecha)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
-            entity.Property(e => e.Total).HasColumnType("decimal(10, 2)");
-
-            entity.HasOne(d => d.Cliente).WithMany(p => p.Pedidos)
-                .HasForeignKey(d => d.ClienteId)
-                .HasConstraintName("FK__Pedidos__Cliente__45F365D3");
         });
 
         modelBuilder.Entity<Producto>(entity =>

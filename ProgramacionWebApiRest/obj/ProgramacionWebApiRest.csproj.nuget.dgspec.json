@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj": {}
+    "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\-BackEndProgramWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj": {
+    "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\-BackEndProgramWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj",
+        "projectUniqueName": "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\-BackEndProgramWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj",
         "projectName": "ProgramacionWebApiRest",
-        "projectPath": "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj",
+        "projectPath": "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\-BackEndProgramWebApiRest\\ProgramacionWebApiRest\\ProgramacionWebApiRest.csproj",
         "packagesPath": "C:\\Users\\segov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\ProgramacionWebApiRest\\obj\\",
+        "outputPath": "C:\\Users\\segov\\source\\repos\\ProgramacionWebApiRest\\-BackEndProgramWebApiRest\\ProgramacionWebApiRest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\segov\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -66,7 +66,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.6, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
